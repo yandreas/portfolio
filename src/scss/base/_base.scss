@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::selection {
+  background-color: $color-text;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond(laptop) {
+    font-size: 50%;
+  }
+
+  @include respond(tabletsm) {
+    font-size: 45%;
+  }
+
+  @include respond(mini-phone) {
+    font-size: 40%;
+  }
+}
+
+body {
+  background: linear-gradient(to right, $color-bg, $color-bg-light 80%);
+}

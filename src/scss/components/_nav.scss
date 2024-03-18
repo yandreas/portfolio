@@ -1,0 +1,97 @@
+.nav {
+  background-color: transparent;
+  max-width: 5rem;
+  z-index: 10;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+
+  position: fixed;
+  top: 5rem;
+  left: 5rem;
+  bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(tabletsm) {
+    background-color: $color-bg;
+    max-width: 100vw;
+    height: 10rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100;
+    padding: 0 5rem;
+    flex-direction: row;
+  }
+
+  img {
+    width: 5rem;
+    transition: filter 2s cubic-bezier(0.4, 0, 0.2, 1), ease;
+    filter: invert(93%) sepia(1%) saturate(601%) hue-rotate(354deg)
+      brightness(92%) contrast(94%);
+
+    &:hover {
+      filter: invert(84%) sepia(10%) saturate(1957%) hue-rotate(142deg)
+        brightness(90%) contrast(86%);
+      transform: scale(1.1);
+    }
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    @include respond(tabletsm) {
+      flex-direction: row;
+    }
+  }
+
+  &-scroll {
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: row-reverse;
+    writing-mode: vertical-lr;
+    gap: 1rem;
+    align-items: center;
+
+    @include respond(tabletsm) {
+      flex-direction: row;
+      writing-mode: horizontal-tb;
+      transform: rotate(0);
+      font-size: 2rem;
+    }
+  }
+
+  &-link:link,
+  &-link:visited {
+    transition: filter 2s cubic-bezier(0.4, 0, 0.2, 1), ease;
+    color: currentColor;
+    text-decoration: none;
+    padding: 1.6rem;
+  }
+
+  &-link:hover,
+  &-link:active {
+    color: $color-black;
+    filter: invert(84%) sepia(10%) saturate(1957%) hue-rotate(142deg)
+      brightness(90%) contrast(86%);
+
+    transform: scale(1.1);
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include respond(tabletsm) {
+    flex-direction: row;
+  }
+}

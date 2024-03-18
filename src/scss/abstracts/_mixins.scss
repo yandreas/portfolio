@@ -1,0 +1,39 @@
+//Media queries
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == smallest {
+    @media (max-width: $breakpoint-smallest) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mini-phone {
+    @media (max-width: $breakpoint-mini-phone) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: $breakpoint-phone) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tabletsm {
+    @media (max-width: $breakpoint-tablet-sm) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (max-width: $breakpoint-laptop) {
+      @content;
+    }
+  }
+}

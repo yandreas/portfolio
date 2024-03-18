@@ -1,0 +1,162 @@
+.section {
+  padding: 10rem 10rem 10rem 30rem;
+  min-height: 100vh;
+
+  transition: transform 1s, opacity 2s;
+
+  @include respond(tabletsm) {
+    padding: 5rem 5rem 5rem 10rem;
+  }
+
+  @include respond(smallest) {
+    padding-left: 2rem;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 3rem;
+  place-items: start;
+  align-content: center;
+
+  @include respond(tabletsm) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    @include respond(tabletsm) {
+      order: 2;
+    }
+    align-self: start;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-title {
+      color: $color-white;
+      letter-spacing: 0.1rem;
+    }
+    &-text {
+      line-height: 3.5rem;
+      letter-spacing: 0.1rem;
+
+      a {
+        &:link,
+        &:visited {
+          color: $color-hover;
+          text-decoration: none;
+        }
+      }
+    }
+    &-contact {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      &:link,
+      &:visited {
+        font-size: 2rem;
+        color: $color-hover;
+        text-decoration: none;
+      }
+
+      svg {
+        width: 2rem;
+      }
+    }
+  }
+
+  &-image {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: end;
+
+    @include respond(tabletsm) {
+      align-self: start;
+    }
+
+    img {
+      width: 35rem;
+    }
+  }
+}
+
+.projects {
+  padding-top: 0;
+  &__project {
+    min-height: 100vh;
+    display: grid;
+    padding: 4rem;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    transition: transform 1s, opacity 2s;
+
+    @include respond(tabletsm) {
+      min-height: 75vh;
+    }
+
+    @include respond(tablet) {
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+      place-items: center;
+      gap: 2rem;
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+      justify-content: start;
+      @include respond(tablet) {
+        width: 50rem;
+      }
+
+      &:nth-child(even) {
+        justify-self: end;
+      }
+
+      h2 {
+        margin-top: -2rem;
+      }
+
+      p {
+        max-width: 75%;
+        min-width: 40rem;
+        @include respond(tablet) {
+          max-width: 50%;
+        }
+      }
+    }
+
+    &-preview {
+      position: relative;
+      height: 30rem;
+      width: 50rem;
+
+      &:nth-child(odd) {
+        @include respond(tablet) {
+          order: 2;
+        }
+      }
+      img {
+        display: block;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+      }
+
+      &:hover .overlay {
+        width: 50rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+//@import "vendors/PLACEHOLDER";
+
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+@import 'base/animations';
+
+//@import "layout/PLACEHOLDER";
+@import 'layout/header';
+@import 'layout/footer';
+
+//@import "components/PLACEHOLDER";
+@import 'components/nav';
+@import 'components/bganimation';
+@import 'components/animatedtext';
+@import 'components/marker';
+@import 'components/overlay';
+@import 'components/contact';
+
+@import 'pages/home';
+
+//@import "themes/PLACEHOLDER";

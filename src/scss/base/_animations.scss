@@ -1,0 +1,97 @@
+@keyframes bg-animate-01 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-80rem) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,
+  20% {
+    content: 'Responsive';
+  }
+  21%,
+  40% {
+    content: 'HTML5';
+  }
+  41%,
+  60% {
+    content: 'SCSS';
+  }
+  61%,
+  80% {
+    content: 'Javascript';
+  }
+  81%,
+  100% {
+    content: 'React';
+  }
+}
+
+@keyframes typing {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 1rem);
+  }
+}
+
+@keyframes border_anim {
+  0% {
+    width: 100%;
+    background-color: $color-bg;
+  }
+  50% {
+    width: 0%;
+    background-color: $color-bg;
+  }
+
+  100% {
+    width: 100%;
+    background-color: $color-accent;
+  }
+}
+
+@keyframes border_anim-sm {
+  0% {
+    width: 75%;
+    background-color: $color-bg;
+  }
+  50% {
+    width: 0%;
+    background-color: $color-bg;
+  }
+
+  100% {
+    width: 75%;
+    background-color: $color-accent;
+  }
+}

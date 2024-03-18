@@ -1,0 +1,17 @@
+.marker {
+  display: flex;
+  gap: 2rem;
+
+  > div {
+    transform: translateY(45%);
+    width: 10rem;
+    height: 3rem;
+    background-color: $color-accent;
+    clip-path: polygon(100% 0, 100% 10%, 60% 10%, 50% 25%, 10% 25%, 0 0);
+  }
+
+  span {
+    color: $color-text;
+    font-size: 2.5rem;
+  }
+}

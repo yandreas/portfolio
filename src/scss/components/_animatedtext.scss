@@ -1,0 +1,33 @@
+.animated-text {
+  margin-left: 0.5rem;
+  letter-spacing: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  z-index: -2;
+}
+
+.animated-text span {
+  position: relative;
+}
+
+.animated-text span::before {
+  content: '';
+  color: $color-accent;
+  animation: words 20s infinite;
+}
+
+.animated-text span::after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 1rem);
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    $color-bg-animateddark,
+    $color-bg-animatedlight
+  );
+  border-left: 2px solid $color-accent;
+  right: -1rem;
+  animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}

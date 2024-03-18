@@ -1,0 +1,106 @@
+.contact {
+  display: grid;
+  align-content: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4rem;
+    padding-left: 6rem;
+
+    &-title h2 {
+      font-weight: 600;
+      font-size: 4rem;
+      white-space: nowrap;
+    }
+
+    &-title hr {
+      border: none;
+      width: 60%;
+      height: 0.3rem;
+      border-radius: 5px;
+      background-color: $color-accent;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      label {
+        position: absolute;
+        z-index: -10;
+        font-size: 1.5rem;
+        font-weight: 500;
+        transition: transform 0.5s ease;
+      }
+
+      hr {
+        border: none;
+        width: 100%;
+        height: 0.3rem;
+        border-radius: 5px;
+        background-color: $color-bg;
+        @include respond(smallest) {
+          width: 75%;
+        }
+      }
+    }
+
+    &-inputs {
+      width: 50rem;
+      min-height: 4rem;
+      font-size: 1.5rem;
+      border: none;
+      outline: none;
+      color: $color-text;
+      background: transparent;
+
+      &:focus + label,
+      &:not(:placeholder-shown) ~ label {
+        -moz-transform: translateY(-1.5rem) !important;
+        -ms-transform: translateY(-1.5rem) !important;
+        -webkit-transform: translateY(-1.5rem) !important;
+        transform: translateY(-1.5rem) !important;
+      }
+
+      &:focus ~ hr {
+        animation: border_anim 0.75s ease-out forwards;
+        @include respond(smallest) {
+          animation: border_anim-sm 0.75s ease-out forwards;
+        }
+      }
+    }
+
+    button[type='submit'] {
+      font-size: 1.5rem;
+      font-weight: 600;
+      font-family: inherit;
+      letter-spacing: 0.5;
+      display: flex;
+      gap: 0.5rem;
+      place-items: center;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      border-bottom-right-radius: 10px;
+      background-color: $color-accent;
+      transition: transform 0.5s ease;
+
+      &:hover,
+      &:active {
+        transform: scale(1.05);
+      }
+
+      svg {
+        width: 2rem;
+      }
+    }
+  }
+}
+
+textarea.contact__form-inputs {
+  padding-top: 1rem;
+  line-height: 2.5rem;
+  resize: none;
+}
