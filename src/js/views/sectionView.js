@@ -1,4 +1,4 @@
-import View from './VIew.js';
+import View from './View.js';
 
 class sectionView extends View {
   #navLinks = document.querySelector('.nav-scroll');
