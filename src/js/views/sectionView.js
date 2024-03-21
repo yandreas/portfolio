@@ -42,7 +42,6 @@ class sectionView extends View {
   #addReveal = () => {
     const revealSection = (entries, observer) => {
       const [entry] = entries;
-
       if (!entry.isIntersecting) return;
 
       entry.target.classList.remove('hidden');
@@ -51,7 +50,7 @@ class sectionView extends View {
 
     const sectionObserver = new IntersectionObserver(revealSection, {
       root: null,
-      threshold: 0.2,
+      threshold: 0.1,
     });
 
     this.#allSections.forEach(function (section) {
@@ -62,7 +61,8 @@ class sectionView extends View {
   };
 
   #addRevealProjects = () => {
-    const margin = window.innerWidth < 991 ? '-200px' : '50px';
+    const margin = window.innerWidth < 991 ? '200px' : '50px';
+    const threshold = window.innerWidth < 991 ? 0.1 : 0.2;
     const revealSection = (entries, observer) => {
       const [entry] = entries;
 
@@ -74,7 +74,7 @@ class sectionView extends View {
 
     const sectionObserver = new IntersectionObserver(revealSection, {
       root: null,
-      threshold: 0.2,
+      threshold: threshold,
       rootMargin: margin,
     });
 

@@ -1,5 +1,5 @@
 import sectionView from './views/sectionView';
-import contactView from './views/sectionView';
+import contactView from './views/contactView';
 
-init = function () {};
+const init = function () {};
 init();
