@@ -5,13 +5,13 @@ class contactView extends View {
 
   constructor() {
     super();
-    this.#addSubimtListener();
+    this.#addSubmitListener();
   }
 
-  #addSubimtListener() {
+  #addSubmitListener() {
     const handleSubmit = e => {
       e.preventDefault();
-      const myForm = document.getElementById('contact');
+      const myForm = document.getElementById('#contact');
       const formData = new FormData(myForm);
       fetch('/', {
         method: 'POST',
